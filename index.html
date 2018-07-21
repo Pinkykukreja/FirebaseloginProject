@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="loginApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Firebase Login App</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="site-header sticky-top py-1">
+     <div class="container d-flex flex-column flex-md-row justify-content-between">  
+    <a href="#" class="py-2">
+
+    </a>
+    <span class="pull-right">
+        <a class="py-2 d-none d-md-inline-block btn btn-success" ng-href="#!/login">Login</a>
+        <a class="py-2 d-none d-md-inline-block btn btn-primary" ng-href="#!/register">Register</a>
+    </span>
+    </div> 
+</nav>
+    <div class="container">
+        <main ng-view></main>
+    </div>
+
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDlYG6YmHF7NdI-MB4WRef1VriZt75jOVo",
+            authDomain: "logindemo-8694f.firebaseapp.com",
+            databaseURL: "https://logindemo-8694f.firebaseio.com",
+            projectId: "logindemo-8694f",
+            storageBucket: "",
+            messagingSenderId: "189871665964"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <!-- core js -->
+    <!-- remember the sequence -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+
+    <!-- custom js -->
+    <script src="js/app.js"></script>
+    <script src="js/registerctr.js"></script>
+    <script src="js/successCtr.js"></script>
+    
+</body>
+</html>
